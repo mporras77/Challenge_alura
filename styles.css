@@ -1,0 +1,200 @@
+body {
+    background-image: url('img/java.png');
+    /* Ruta de la imagen */
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.left-panel,
+.right-panel {
+    width: 45%;
+}
+
+.button {
+    border-radius: 4pc;
+    width: 150px;
+    /* Ancho del botón */
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 10px;
+    /* Espacio entre los botones */
+    margin-top: 78%;
+    border: 2px solid #1e5f74;
+    /* Borde azul oscuro */
+    background-color: #1e5f74;
+    /* Fondo azul oscuro */
+    color: white;
+    /* Texto blanco */
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+
+}
+
+.button_3 {
+    z-index: 1;
+    border-radius: 4px;
+    width: 150px;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 78%;
+    /* Esto debería revisarse según el diseño final */
+    border: 2px solid #1e5f74;
+    background-color: #1e5f74;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    position: absolute;
+    top: 50px;
+    left: 358px;
+}
+
+.button_3:hover {
+    cursor: pointer;
+    /* Cambiar el cursor a mano al pasar el mouse sobre el botón */
+}
+
+.button:hover {
+    background-color: white;
+    /* Cambia el fondo al pasar el cursor */
+    color: #1e5f74;
+    /* Cambia el texto al pasar el cursor */
+}
+
+.button:last-child {
+    background-color: transparent;
+    /* Fondo transparente para el segundo botón */
+    color: #1e5f74;
+    /* Texto azul oscuro */
+}
+
+.button:last-child:hover {
+    background-color: #1e5f74;
+    /* Cambia el fondo al pasar el cursor */
+    color: white;
+    /* Cambia el texto al pasar el cursor */
+}
+
+.textarea-container {
+    position: relative;
+    width: 100%;
+    /* Asegura que el contenedor tenga el mismo ancho que el textarea */
+}
+
+.editable-text {
+    position: relative;
+    top: 63px;
+    left: 188px;
+    color: rgba(0, 0, 0, 0.3);
+    /* Color del texto con opacidad */
+}
+
+.editable-text.empty {
+    color: rgba(0, 0, 0, 0.6);
+    /* Cambia el color y la opacidad cuando está vacío */
+    font-style: italic;
+    /* Puedes agregar cursiva u otras modificaciones */
+}
+
+
+
+
+#encrypted-text {
+    text-align: center;
+    width: 46%;
+    /* Ancho especificado */
+    height: 545px;
+    /* Altura especificada */
+    padding-left: 1px;
+    /* Espacio especificado */
+    position: absolute;
+    left: 99%;
+    /* Mueve el textarea hacia la izquierda al 99% */
+    transform: translateX(-99%);
+    /* Ajusta la posición para que esté correctamente alineado */
+    border-radius: 4%;
+}
+
+.textarea-container img {
+    position: absolute;
+    top: 117px;
+    /* Posición vertical de la imagen */
+    left: 54%;
+    /* Posición horizontal de la imagen */
+    width: 238px;
+    /* Ancho de la imagen */
+    height: 163px;
+    /* Altura de la imagen */
+    z-index: 1;
+}
+
+.message-large {
+    position: absolute;
+    top: 300px;
+    /* Ajusta la posición según sea necesario */
+    font-size: 20px;
+    /* Tamaño de fuente grande */
+    left: 54%;
+    /* Ajusta la posición según sea necesario */
+    color: gray;
+    text-align: center;
+}
+
+.message-small {
+
+    position: absolute;
+    top: 346px;
+    /* Ajusta la posición según sea necesario */
+    font-size: 14px;
+    /* Tamaño de fuente normal */
+    left: 54%;
+    /* Ajusta la posición según sea necesario */
+    color: gray;
+    text-align: center;
+}
+
+@media (max-width: 767px) {
+    .container {
+        flex-direction: column; /* Cambia a dirección de columna en pantallas pequeñas */
+        padding: 10px; /* Reducir el relleno en pantallas pequeñas */
+    }
+
+    .left-panel,
+    .right-panel {
+        width: 100%; /* Ocupa todo el ancho en pantallas pequeñas */
+        max-width: 100%; /* Ancho máximo completo en pantallas pequeñas */
+    }
+
+    .textarea-container img {
+        display: none; /* Oculta la imagen en pantallas pequeñas */
+    }
+
+    .message-large,
+    .message-small {
+        display: none; /* Oculta los mensajes en pantallas pequeñas */
+    }
+
+    .editable-text {
+        width: 100%; /* Ocupa todo el ancho disponible */
+        min-height: 80px; /* Altura mínima del div editable en pantallas pequeñas */
+        font-size: 14px; /* Reducir el tamaño de fuente en pantallas pequeñas */
+        padding: 8px; /* Reducir el espacio interior en pantallas pequeñas */
+    }
+
+    #encrypted-text {
+        width: 100%; /* Ocupa todo el ancho disponible */
+        min-height: 80px; /* Altura mínima del textarea en pantallas pequeñas */
+        font-size: 14px; /* Reducir el tamaño de fuente en pantallas pequeñas */
+        padding: 8px; /* Reducir el espacio interior en pantallas pequeñas */
+    }
+
+    .button,
+    .button_3 {
+        width: 100%; /* Ancho completo de los botones en pantallas pequeñas */
+        margin-top: 10px; /* Espacio superior entre botones en pantallas pequeñas */
+    }
+}

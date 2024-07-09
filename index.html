@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Encryption and Decryption</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <img class="images_logo" src="img/images.png" alt="Logo">
+    <div class="container">
+        <div class="left-panel">
+            <div class="button-container">
+                <h2>
+                    <div class="editable-text" contenteditable="true" oninput="handleInput(event)">Ingresa el Texto aquí</div>
+                </h2>
+                <button class="button" onclick="encryptText()">Encriptar</button>
+                <button class="button" onclick="decryptText()">Desencriptar</button>
+            </div>
+        </div>
+        <div class="right-panel">
+            <div class="textarea-container">
+                <img src="img/image.png" alt="Placeholder Image">
+                <textarea id="encrypted-text" readonly></textarea>
+                <div class="message-large">Ningún mensaje fue encontrado</div>
+                <div class="message-small">Ingresa el texto que desees encriptar o desencriptar.</div>
+                <button class="button_3" onclick="copyText()">Copiar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
